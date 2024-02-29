@@ -1,0 +1,93 @@
+{% extends 'dashboard/main.html' %}
+{% block body %}
+{% load custom_filters %}
+<div class="content-wrapper">
+    <!-- Content -->
+
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <div class="col-lg-12 mb-4 order-0">
+                <div class="card">
+                    <div class="d-flex align-items-end row">
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Congratulations {{request.user.email|remove_email_suffix}}! 🎉</h5>
+                                <p class="mb-4">
+                                    You have registered to <span class="fw-bold">Prakash Ganga Capiitals</span>.
+                                    Check our new course of <a href="/courses">Fudamental Analysis</a>
+                                </p>
+
+                                <a href="/courses" class="btn btn-sm btn-outline-primary">View
+                                    Courses</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 text-center text-sm-left">
+                            <div class="card-body pb-0 px-0 px-md-4">
+                                <img src="/static/dashboard/assets/img/illustrations/man-with-laptop-light.png"
+                                    height="140" alt="View Badge User"
+                                    data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                                    data-app-light-img="illustrations/man-with-laptop-light.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Revenue -->
+            <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                <div class="card">
+                    <div class="row row-bordered g-0">
+                        <div class="col-md-8">
+                            <h5 class="card-header m-0 me-2 pb-3">Course Details</h5>
+                            <div class="px-4">
+                                <h2 class="text-primary">50% off</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quaerat dolore optio
+                                    itaque architecto explicabo velit facere, nam molestias numquam ipsum suscipit
+                                    officiis officia autem, temporibus quas veritatis eos recusandae magni obcaecati
+                                    fugit. Voluptate repellendus tenetur, deserunt itaque omnis, odit vitae tempora
+                                    illum sint, culpa reiciendis tempore quas! Quas tempora ratione voluptas ipsam
+                                    minima recusandae mollitia quaerat fugiat eaque?
+                                    <br><br>
+                                    <a href="/courses" class="btn btn-primary">Start Now</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            2023
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="growthChart"></div>
+                            <div class="text-center fw-semibold pt-3 mb-2">1560 New Enrollments</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / Content -->
+
+    <!-- Footer -->
+    <footer class="content-footer footer bg-footer-theme">
+        <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+            <div class="mb-2 mb-md-0">
+                © Prakash Ganga Capitals
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                , Designed and Powered by
+                <a href="mailto:atulg0736@gmail.com" target="_blank" class="footer-link fw-bolder">atulg</a>
+            </div>
+        </div>
+    </footer>
+    <!-- / Footer -->
+
+    <div class="content-backdrop fade"></div>
+</div>
+{% endblock body %}

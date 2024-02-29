@@ -1,0 +1,504 @@
+{% extends 'home/main.html' %}
+{% block body %}
+<!-- About Satrt -->
+<div class="container-fluid py-6">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                <div class="video">
+                    <button type="button" class="btn btn-play" data-bs-toggle="modal"
+                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                <h1 class="mb-4 animated bounceInDown" style="color: black;">Indian Economy <span
+                        class="text-primary">Growth</span></h1>
+                <p class="mb-4 text-dark">
+                    PrakashGangaCaps goes beyond traditional investment management services by offering
+                    comprehensive educational opportunities in fundamental analysis and technical analysis. Our
+                    courses are designed to empower individuals with the knowledge and skills needed to make
+                    informed investment decisions in today's dynamic market environment
+                </p>
+                <div class="row g-4 text-dark mb-5">
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i>Investory Advices
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i>Fundamental Analysis
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i>Technical Analysis
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="fas fa-share text-primary me-2"></i>Risks Management
+                    </div>
+                </div>
+                <a href="" class="btn btn-primary py-3 px-5 rounded-pill">Register Now<i
+                        class="fas fa-arrow-right ps-2"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+            <div class="modal-body">
+                <!-- 16:9 aspect ratio -->
+                <div class="ratio ratio-16x9">
+                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                        allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fact End -->
+
+<!-- Events Start -->
+<div class="container-fluid event py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <small
+                class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Latest
+                Events</small>
+            <h1 class="display-5 mb-5">Our Social & Professional Events Gallery</h1>
+        </div>
+        <div class="tab-class text-center">
+            <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
+                <li class="nav-item p-2">
+                    <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill"
+                        href="#tab-1">
+                        <span class="text-dark" style="width: 150px;">All Events</span>
+                    </a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="d-flex py-2 mx-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                        href="#tab-2">
+                        <span class="text-dark" style="width: 150px;">QnA Sessions</span>
+                    </a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                        href="#tab-3">
+                        <span class="text-dark" style="width: 150px;">Live Streaming</span>
+                    </a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill"
+                        href="#tab-4">
+                        <span class="text-dark" style="width: 150px;">Wokshops</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-1"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-2"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-3"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-4"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-5"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-6"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-7"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-17"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-2" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-8"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-9"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-3" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-10"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-11"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-4" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-12"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-13"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-5" class="tab-pane fade show p-0">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-14"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="event-img position-relative">
+                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <div class="event-overlay d-flex flex-column p-4">
+                                            <a href="/static/landing/img/01.jpg" data-lightbox="event-15"
+                                                class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Events End -->
+
+<div class="container-fluid service py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
+            <small
+                class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our
+                Services</small>
+            <h1 class="display-5 mb-5 text-dark">Courses We Offer</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.1s"
+                style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
+                <div class="bg-light rounded service-item">
+                    <div class="service-content d-flex align-items-center justify-content-center p-4">
+                        <div class="service-content-icon text-center">
+                            <h4 class="mb-3 text-dark">Fundamental Analysis</h4>
+                            <p class="mb-4">Unlock the power of value investing with fundamental analysis. Dive deep
+                                into financial statements, and industry trends to discover the
+                                true worth of assets.</p>
+                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s"
+                style="visibility: visible; animation-delay: 0.3s; animation-name: bounceInUp;">
+                <div class="bg-light rounded service-item">
+                    <div class="service-content d-flex align-items-center justify-content-center p-4">
+                        <div class="service-content-icon text-center">
+                            <h4 class="mb-3 text-dark">Technical Analysis</h4>
+                            <p class="mb-4">Master the art of chart reading and market psychology with technical
+                                analysis. Harness historical price data and time your trades effectively. </p>
+                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: bounceInUp;">
+                <div class="bg-light rounded service-item">
+                    <div class="service-content d-flex align-items-center justify-content-center p-4">
+                        <div class="service-content-icon text-center">
+                            <h4 class="mb-3 text-dark">Risk Management</h4>
+                            <p class="mb-4">Make informed decisions and seize opportunities based on sound
+                                fundamentals. Join us in navigating the markets with insight and precision.</p>
+                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s"
+                style="visibility: visible; animation-delay: 0.5s; animation-name: bounceInUp;">
+                <div class="bg-light rounded service-item">
+                    <div class="service-content d-flex align-items-center justify-content-center p-4">
+                        <div class="service-content-icon text-center">
+                            <h4 class="mb-3 text-dark">Volume Analysis</h4>
+                            <p class="mb-4">Explore the dynamic world of price action and momentum to stay ahead of
+                                the curve. Elevate your trading game with the science of technical analysis.</p>
+                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <h1 class="display-5 mb-5">Announcements & Updates</h1>
+        </div>
+        <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp"
+            data-wow-delay="0.1s">
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Bombay Stock Exchange (BSE) and National Stock Exchange (NSE)</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        These are the two primary stock exchanges in India. BSE is the oldest stock exchange in
+                        Asia, established in 1875, while NSE was founded in 1992.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">
+                            Key Indices
+                        </h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        The two major stock market indices in India are the BSE Sensex and the NSE Nifty. These
+                        indices track the performance of a select group of stocks and are considered barometers of
+                        the Indian stock market's overall health.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Volatility</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        The Indian stock market can be highly volatile, influenced by domestic factors such as
+                        economic data, corporate earnings, and government policies, as well as global events like
+                        geopolitical tensions and fluctuations in international markets.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Market Regulations</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        The Securities and Exchange Board of India (SEBI) is the regulatory body overseeing the
+                        Indian securities market. SEBI regulates stock exchanges, brokers, merchant banks, and other
+                        intermediaries in the market to ensure fair and transparent trading practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Market Hours</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        The Indian stock market operates from Monday to Friday, with trading hours typically from
+                        9:15 AM to 3:30 PM Indian Standard Time (IST). However, there are pre-opening and
+                        post-closing sessions as well.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Market Capitalization</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        The Indian stock market boasts companies with diverse market capitalizations, ranging from
+                        large-cap to small-cap stocks. Some of India's largest companies by market capitalization
+                        are in sectors like IT, banking, and energy.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Foreign Institutional Investors</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+
+                    <p class="fs-5 m-0 pt-3">
+                        These are major players in the Indian stock market. FIIs refer to foreign entities investing
+                        in Indian securities, while DIIs comprise domestic entities such as mutual funds, insurance
+                        companies, and banks.
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial-item rounded bg-light">
+                <div class="d-flex mb-3">
+                    <div class="position-absolute" style="top: 15px; right: 20px;">
+                    </div>
+                    <div class="ps-3 my-auto">
+                        <h4 class="mb-0">Budget Day</h4>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p class="fs-5 m-0 pt-3">
+                        The annual Union Budget presentation by the Indian government is a significant event for the
+                        stock market. Investors keenly watch for announcements related to taxes, fiscal policies,
+                        infrastructure spending, and other economic reforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

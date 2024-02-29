@@ -1,0 +1,79 @@
+{% extends 'home/main.html' %}
+{% block title %}
+<h1 class="mb-4 animated bounceInDown" style="color: white;">{{ current_course }}</h1>
+{% endblock title %}
+{% block body %}
+{% load custom_filters %}
+<style>
+    .course_video {
+        width: 90%;
+        height: 40%;
+    }
+</style>
+<script>location.href = "#courses"</script>
+<br><br>
+<section id="courses">
+    <div class="content-wrapper">
+        <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row">
+                <div class="tab-class text-center">
+                    <div class="tab-content">
+                        <h1 class="mb-4 animated bounceInDown text-primary">{{ current_course }}</h1>
+                        <br>
+                        <div id="tab-6" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                {% for x in current_chapter %}
+                                <div class="col-lg-10 wow bounceInUp" data-wow-delay="0.1s"
+                                    style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
+                                    <a href="/chapters/{{current_course.id}}?page={{forloop.counter}}"
+                                        style="color: black;">
+                                        <div class="menu-item d-flex align-items-center">
+                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                                <div
+                                                    class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                    <h4>Chapter-{{x.chapter_number}}</h4>
+                                                </div>
+                                                <h1 class="mb-2" style="text-transform: capitalize;">
+                                                    {{x.chapter_name}}
+                                                </h1>
+                                                <br><br>
+                                                <center>
+                                                    <video class="course_video" src="{{x.video.url}}" controls></video>
+                                                </center>
+                                                <br><br>
+                                                <p class="mb-4">
+                                                    {{x.content|safe}}
+                                                </p>
+                                                <br><br>
+                                                <div>
+                                                {% if current_chapter.has_previous %}
+                                                <a href="?page={{current_chapter.previous_page_number}}"
+                                                    class="btn btn-outline-primary py-3 px-5 rounded-pill">
+                                                    Previous
+                                                </a>
+                                                {% endif %}
+                                                {% if current_chapter.has_next %}
+                                                <a href="?page={{ current_chapter.next_page_number }}"
+                                                    class="btn btn-primary py-3 px-5 rounded-pill "
+                                                    style="float: right;">
+                                                    Next
+                                                </a>
+                                                <br>
+                                                <br>
+                                                {% endif %}
+                                            </div>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
