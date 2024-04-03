@@ -29,9 +29,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
-    'ckeditor',
+    'django_ckeditor_5',
     'dashboard',
     'courses',
+
 ]
 
 
@@ -137,3 +138,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_URL = '/logout'
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = '/social-auth/login/google-oauth2/'
+
+RAZORPAY_KEY = 'rzp_test_ydTUOXi6RNHcZe'
+RAZORPAY_SECRET = 'uRtSdpO0XbyI25EkMbhUvEQI'

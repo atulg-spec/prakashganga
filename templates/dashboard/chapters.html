@@ -5,47 +5,134 @@
 {% block body %}
 {% load custom_filters %}
 <style>
-    .course_video {
-        width: 90%;
-        height: 40%;
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .player {
+        width: 95%;
+        max-width: 750px;
+        position: relative;
+        padding-left: 6%;
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .video-container {
+        width: 100%;
+    }
+
+    .controls__btn {
+        background: none;
+        border: 0;
+        line-height: 1;
+        color: white;
+        text-align: center;
+        outline: 0;
+        padding: 0;
+        cursor: pointer;
+        max-width: 50px;
+    }
+
+    .controls {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        background: rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+    }
+
+    .controls>* {
+        flex: 1;
+    }
+
+    .progress {
+        flex: 10;
+        position: relative;
+        display: flex;
+        flex-basis: 100%;
+        height: 5px;
+        /* background: rgba(0,0,0,0.5); */
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        height: 15px;
+    }
+
+    .progress__filled {
+        width: 50%;
+        background: #AA5500;
+        flex: 0;
+        flex-basis: 0%;
     }
 </style>
-<script>location.href = "#courses"</script>
+<script>
+    location.href = "#courses"
+    document.getElementById('hero').style.display = 'None'
+</script>
 <br><br>
 <section id="courses">
     <div class="content-wrapper">
-        <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="row">
+        <div class="row g-2">
+            <div class="col-2" id="unknownblock" style="padding:0% 2%;">
+                <h4>Chapters</h4>
+                {% for x in chapters %}
+                <div class="card" style="margin: 2% 1%; border: none;">
+                    <a href="/chapters/1?page={{forloop.counter}}">
+                        <label>{{x.chapter_name}}</label><br>
+                        <img class="mb-2" src="{{x.thumbnail.url}}" alt="{{x.chapter_name}}" width="200px"
+                            height="120px" style="border-radius: 10px;">
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="col-10">
                 <div class="tab-class text-center">
                     <div class="tab-content">
-                        <h1 class="mb-4 animated bounceInDown text-primary">{{ current_course }}</h1>
+                        <h1 class="mb-4 animated bounceInDown text-primary" style="text-align: left; padding-left: 4%;">
+                            {{current_course }}
+                        </h1>
                         <br>
                         <div id="tab-6" class="tab-pane fade show p-0 active">
                             <div class="row g-4">
                                 {% for x in current_chapter %}
                                 <div class="col-lg-10 wow bounceInUp" data-wow-delay="0.1s"
                                     style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
-                                    <a href="/chapters/{{current_course.id}}?page={{forloop.counter}}"
-                                        style="color: black;">
-                                        <div class="menu-item d-flex align-items-center">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
-                                                <div
-                                                    class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Chapter-{{x.chapter_number}}</h4>
+                                    <div style="text-align: left; padding-left: 6%;">
+                                        <h4>Chapter-{{x.chapter_number}}</h4>
+                                        <h1 class="mb-2" style="text-transform: capitalize;">
+                                            {{x.chapter_name}}
+                                        </h1>
+                                    </div>
+
+                                    <div class="menu-item d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <br><br>
+                                            <div class="player">
+                                                <video class="video-container">
+                                                    <source src="{{x.video.url}}" type="video/mp4" />
+                                                </video>
+                                                <div class="controls">
+                                                    <div class="progress">
+                                                        <div class="progress__filled"></div>
+                                                    </div>
+                                                    <button class="controls__btn playPauseBtn" title="Toggle Play">
+                                                        ►
+                                                    </button>
                                                 </div>
-                                                <h1 class="mb-2" style="text-transform: capitalize;">
-                                                    {{x.chapter_name}}
-                                                </h1>
-                                                <br><br>
-                                                <center>
-                                                    <video class="course_video" src="{{x.video.url}}" controls></video>
-                                                </center>
-                                                <br><br>
-                                                <p class="mb-4">
-                                                    {{x.content|safe}}
-                                                </p>
-                                                <br><br>
-                                                <div>
+                                            </div>
+                                            <br><br>
+                                            <div class="mb-4" style="padding:0% 6%;">
+                                                {{x.content|safe}}
+                                            </div>
+                                            <br><br>
+                                            <div style="padding: 0% 6%;">
                                                 {% if current_chapter.has_previous %}
                                                 <a href="?page={{current_chapter.previous_page_number}}"
                                                     class="btn btn-outline-primary py-3 px-5 rounded-pill">
@@ -63,9 +150,8 @@
                                                 {% endif %}
                                             </div>
 
-                                            </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 {% endfor %}
                             </div>
@@ -76,4 +162,68 @@
         </div>
     </div>
 </section>
+<script>
+    const videoContainer = document.querySelector(".video-container");
+    const playPauseBtn = document.querySelector(".playPauseBtn");
+    const progress = document.querySelector(".progress");
+    const progressBar = document.querySelector(".progress__filled");
+
+    function togglePlay() {
+        if (videoContainer.paused || videoContainer.ended) {
+            videoContainer.play();
+        } else {
+            videoContainer.pause();
+        }
+    }
+
+    function updatePlayBtn() {
+        playPauseBtn.innerHTML = videoContainer.paused ? "►" : "❚❚";
+    }
+
+    function handleProgress() {
+        const progressPercentage = (videoContainer.currentTime / videoContainer.duration) * 100;
+        progressBar.style.flexBasis = `${progressPercentage}%`;
+    }
+
+    function jump(e) {
+        const position = (e.offsetX / progress.offsetWidth) * videoContainer.duration;
+        videoContainer.currentTime = position;
+    }
+
+    playPauseBtn.addEventListener("click", togglePlay);
+    videoContainer.addEventListener("click", togglePlay);
+    videoContainer.addEventListener("play", updatePlayBtn);
+    videoContainer.addEventListener("pause", updatePlayBtn);
+    videoContainer.addEventListener("timeupdate", handleProgress);
+
+    let mousedown = false;
+    progress.addEventListener("click", jump);
+    progress.addEventListener("mousedown", () => (mousedown = true));
+    progress.addEventListener("mousemove", (e) => mousedown && jump(e));
+    progress.addEventListener("mouseup", () => (mousedown = false));
+
+</script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // Function to check device width and hide element if smaller than 1000px
+        function checkDeviceWidth() {
+            var element = document.getElementById('unknownblock'); // Replace 'yourElementId' with the actual ID of your element
+            if (window.innerWidth < 1000) {
+                element.style.display = 'none';
+            } else {
+                element.style.display = ''; // Reset to default display property
+            }
+        }
+
+        // Initial check when the page loads
+        checkDeviceWidth();
+
+        // Event listener for window resize
+        window.addEventListener('resize', function () {
+            checkDeviceWidth();
+        });
+    });
+
+</script>
+
 {% endblock body %}

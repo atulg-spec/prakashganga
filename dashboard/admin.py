@@ -52,6 +52,14 @@ admin.site.unregister(Group)
 class CourseAdmin(admin.ModelAdmin):
     list_display = ('name',)
 
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('name','phone_number_or_email','age','subject','date_time')
+
+
+@admin.register(Updates)
+class AnnouncementAdmin(admin.ModelAdmin):
+    list_display = ('subject','description')
 
 @admin.register(Chapter)
 class TopicAdmin(admin.ModelAdmin):

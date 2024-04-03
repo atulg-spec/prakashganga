@@ -1,0 +1,26 @@
+{% extends 'home/main.html' %}
+{% block body %}
+<br><br>
+<script>
+    document.getElementById('hero').style.display = 'None'
+    setTimeout(()=>{
+        location.href = "/course"
+    },5000)
+</script>
+<div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s"
+    style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
+    <div class="container">
+        <center>
+            <div class="p-5 bg-light rounded contact-form">
+                {% if check %}
+                <iframe src="https://lottie.host/embed/edb87716-c068-4d04-bba2-c79a93718eac/oB8UKbD0Qm.json"></iframe>
+                <p>Transaction Successfull.<a href="/course">Continue to course</a></p>
+                {% else %}
+                <iframe src="https://lottie.host/embed/357c19f7-63c7-412d-8de4-92b39b87caf2/IplOgA3FLO.json"></iframe>
+                <p>Oops! something went wrong.<a href="/pricing">Try Again</a></p>
+                {% endif %}
+            </div>
+        </center>
+    </div>
+</div>
+{% endblock body %}

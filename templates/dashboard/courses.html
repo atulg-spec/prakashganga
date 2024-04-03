@@ -19,20 +19,19 @@
                                 {% for x in chapters %}
                                 <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.1s"
                                     style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
-                                    <a href="/chapters/{{current_course.id}}?page={{forloop.counter}}"
-                                        style="color: black;">
-                                        <div class="menu-item d-flex align-items-center">
-                                            <div class="w-100 d-flex flex-column text-start ps-4">
+                                    <div class="menu-item d-flex align-items-center">
+                                        <div class="w-100 d-flex flex-column text-start ps-4">
+                                            <a href="/chapters/1?page={{forloop.counter}}">
                                                 <div
-                                                    class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h5>Chapter-{{forloop.counter}}</h5>
-                                                </div>
-                                                <h4 class="mb-0" style="text-transform: capitalize;">
-                                                    {{x.chapter_name}}
-                                                </h4>
+                                                class="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                <h5>Chapter-{{forloop.counter}}</h5>
                                             </div>
+                                            <h4 class="mb-0" style="text-transform: capitalize;">
+                                                {{x.chapter_name}}
+                                            </h4>
+                                        </a>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                                 {% endfor %}
                             </div>

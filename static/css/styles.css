@@ -39,7 +39,7 @@ nav {
 }
 
 .hero {
-    background-image: url('https://investors.gqg.com/FormBuilder/_Resource/_module/STKMVsT0A0OsQk0x-309rw/images/ASX-Header.jpg'); /* Add your image URL */
+    background-image: url('/static/landing/img/orghero.jpg'); /* Add your image URL */
     background-size: cover;
     height: 300px;
     display: flex;

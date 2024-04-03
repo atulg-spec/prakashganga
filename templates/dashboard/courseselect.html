@@ -23,7 +23,11 @@
                                     <div class="service-content-icon text-center">
                                         <h4 class="mb-3 text-dark">{{x.name}}</h4>
                                         <p class="mb-4">{{x.short_description}}</p>
+                                        {% if request.user.is_suscribed %}
                                         <a href="/courses/{{x.id}}" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                                        {% else %}
+                                        <a href="/pricing" class="btn btn-primary px-4 py-2 rounded-pill">Continue</a>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -38,152 +42,52 @@
 </section>
 
 
-<div class="container-fluid py-6">
-    <div class="container">
-        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-            <h1 class="display-5 mb-5">Announcements & Updates</h1>
-        </div>
-        <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp"
-            data-wow-delay="0.1s">
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Bombay Stock Exchange (BSE) and National Stock Exchange (NSE)</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        These are the two primary stock exchanges in India. BSE is the oldest stock exchange in
-                        Asia, established in 1875, while NSE was founded in 1992.
-                    </p>
-                </div>
+<section id="updates">
+    <div class="container-fluid py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Announcements & Updates</h1>
             </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
+            <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp"
+                data-wow-delay="0.1s">
+                {% for x in updates %}
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">{{x.subject}}</h4>
+                        </div>
                     </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">
-                            Key Indices
-                        </h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
+                    <div class="testimonial-content">
 
-                    <p class="fs-5 m-0 pt-3">
-                        The two major stock market indices in India are the BSE Sensex and the NSE Nifty. These
-                        indices track the performance of a select group of stocks and are considered barometers of
-                        the Indian stock market's overall health.
-                    </p>
+                        <p class="fs-5 m-0 pt-3">
+                            {{x.description}}
+                        </p>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
+            <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
+                {% for x in updates reversed %}
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">{{x.subject}}</h4>
+                        </div>
                     </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Volatility</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
+                    <div class="testimonial-content">
 
-                    <p class="fs-5 m-0 pt-3">
-                        The Indian stock market can be highly volatile, influenced by domestic factors such as
-                        economic data, corporate earnings, and government policies, as well as global events like
-                        geopolitical tensions and fluctuations in international markets.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Market Regulations</h4>
+                        <p class="fs-5 m-0 pt-3">
+                            {{x.description}}
+                        </p>
                     </div>
                 </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Securities and Exchange Board of India (SEBI) is the regulatory body overseeing the
-                        Indian securities market. SEBI regulates stock exchanges, brokers, merchant banks, and other
-                        intermediaries in the market to ensure fair and transparent trading practices.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Market Hours</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Indian stock market operates from Monday to Friday, with trading hours typically from
-                        9:15 AM to 3:30 PM Indian Standard Time (IST). However, there are pre-opening and
-                        post-closing sessions as well.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Market Capitalization</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Indian stock market boasts companies with diverse market capitalizations, ranging from
-                        large-cap to small-cap stocks. Some of India's largest companies by market capitalization
-                        are in sectors like IT, banking, and energy.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Foreign Institutional Investors</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        These are major players in the Indian stock market. FIIs refer to foreign entities investing
-                        in Indian securities, while DIIs comprise domestic entities such as mutual funds, insurance
-                        companies, and banks.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Budget Day</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    <p class="fs-5 m-0 pt-3">
-                        The annual Union Budget presentation by the Indian government is a significant event for the
-                        stock market. Investors keenly watch for announcements related to taxes, fiscal policies,
-                        infrastructure spending, and other economic reforms.
-                    </p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock body %}

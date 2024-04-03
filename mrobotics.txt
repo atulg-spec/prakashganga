@@ -1,0 +1,65 @@
+Lapu SIM Login and Reacharges Web
+
+
+Modules
+
+1. User Login & Registration
+2. User Dashboard
+3. Admin Login
+4. Admin Dahboard
+5. Payment Gateway and Transaction History
+6. Wallet + Commision
+7. SIM Login and Recharge Integration
+8. Support and Contact Us
+
+
+User Login and Dashboard
+
+User Sign Up and Login Page
+Email Verification
+User can add amount to Wallet
+User can Recharge to any number(Airtel & Jio only) from wallet
+Can see wallet Balance
+Can see their Wallet Transactions History
+Can see total Commision Earned
+Can see Full Recharges History
+
+
+
+
+Admin Login and Dashboard
+
+Admin Login Page
+Can edit and Update and Delete Users
+Can Add and Deduct Payment in Wallet
+Can Ban and restrict Users
+Can See all payment transactions and Recharge Transactions
+Can login a SIM (Airtel & Jio only) for Recharges
+Can see Customer Contact Us requests
+
+
+Payment Gateway
+Razorpay Payment Gateway Integration
+
+
+Wallet
+The wallet will be displayed with amount added and Commision (set by admin)
+
+
+Support and Contact Us
+Contact Us and Support Page for Customer Querries and Complains 
+
+
+The estimated timeline for this website development is 20 days. This includes all
+the phases from requirement gathering to deployment. The actual timeline may
+vary based on the project scope and any unforeseen challenges during
+development.
+
+Payment Terms :
+
+Total Price of the whole work is 18,000 rupees.
+
+We propose a payment schedule as follows:
+
+7,000 Rupees upfront payment on starting the work.
+11,000 Rupees on web deployment and final acceptance after testing.

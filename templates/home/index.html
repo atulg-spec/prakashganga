@@ -21,22 +21,12 @@
                     courses are designed to empower individuals with the knowledge and skills needed to make
                     informed investment decisions in today's dynamic market environment
                 </p>
-                <div class="row g-4 text-dark mb-5">
-                    <div class="col-sm-6">
-                        <i class="fas fa-share text-primary me-2"></i>Investory Advices
-                    </div>
-                    <div class="col-sm-6">
-                        <i class="fas fa-share text-primary me-2"></i>Fundamental Analysis
-                    </div>
-                    <div class="col-sm-6">
-                        <i class="fas fa-share text-primary me-2"></i>Technical Analysis
-                    </div>
-                    <div class="col-sm-6">
-                        <i class="fas fa-share text-primary me-2"></i>Risks Management
-                    </div>
-                </div>
-                <a href="" class="btn btn-primary py-3 px-5 rounded-pill">Register Now<i
-                        class="fas fa-arrow-right ps-2"></i></a>
+
+                {% if user.is_authenticated %}
+                {% else %}
+                <a href="/social-auth/login/google-oauth2/" class="btn btn-primary py-3 px-5 rounded-pill">Register
+                    Now<i class="fas fa-arrow-right ps-2"></i></a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -102,72 +92,72 @@
                             <div class="row g-4">
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event2.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-1"
+                                            <a href="/static/dashboard/assets/img/layouts/event2.jpg" data-lightbox="event-1"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-2"
+                                            <a href="/static/dashboard/assets/img/layouts/event1.jpg" data-lightbox="event-2"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event3.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-3"
+                                            <a href="/static/dashboard/assets/img/layouts/event3.jpg" data-lightbox="event-3"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event4.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-4"
+                                            <a href="/static/dashboard/assets/img/layouts/event4.jpg" data-lightbox="event-4"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event5.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-5"
+                                            <a href="/static/dashboard/assets/img/layouts/event5.jpg" data-lightbox="event-5"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event6.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-6"
+                                            <a href="/static/dashboard/assets/img/layouts/event6.jpg" data-lightbox="event-6"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-7"
+                                            <a href="/static/dashboard/assets/img/layouts/event1.jpg" data-lightbox="event-7"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event3.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
-                                            <a href="/static/landing/img/fact.jpg" data-lightbox="event-17"
+                                            <a href="/static/dashboard/assets/img/layouts/event3.jpg" data-lightbox="event-17"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
                                         </div>
                                     </div>
@@ -182,7 +172,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-8"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -191,7 +181,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-9"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -208,7 +198,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-10"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -217,7 +207,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-11"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -234,7 +224,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-12"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -243,7 +233,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-13"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -260,7 +250,7 @@
                             <div class="row g-4">
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-14"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -269,7 +259,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3">
                                     <div class="event-img position-relative">
-                                        <img class="img-fluid rounded w-100" src="/static/landing/img/fact.jpg" alt="">
+                                        <img class="img-fluid rounded w-100" src="/static/dashboard/assets/img/layouts/event1.jpg" alt="">
                                         <div class="event-overlay d-flex flex-column p-4">
                                             <a href="/static/landing/img/01.jpg" data-lightbox="event-15"
                                                 class="my-auto"><i class="fas fa-search-plus text-dark fa-2x"></i></a>
@@ -305,7 +295,7 @@
                             <p class="mb-4">Unlock the power of value investing with fundamental analysis. Dive deep
                                 into financial statements, and industry trends to discover the
                                 true worth of assets.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                            <a href="/course" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -318,7 +308,7 @@
                             <h4 class="mb-3 text-dark">Technical Analysis</h4>
                             <p class="mb-4">Master the art of chart reading and market psychology with technical
                                 analysis. Harness historical price data and time your trades effectively. </p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                            <a href="/course" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -331,7 +321,7 @@
                             <h4 class="mb-3 text-dark">Risk Management</h4>
                             <p class="mb-4">Make informed decisions and seize opportunities based on sound
                                 fundamentals. Join us in navigating the markets with insight and precision.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                            <a href="/course" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -344,7 +334,7 @@
                             <h4 class="mb-3 text-dark">Volume Analysis</h4>
                             <p class="mb-4">Explore the dynamic world of price action and momentum to stay ahead of
                                 the curve. Elevate your trading game with the science of technical analysis.</p>
-                            <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
+                            <a href="/course" class="btn btn-primary px-4 py-2 rounded-pill">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -352,153 +342,145 @@
         </div>
     </div>
 </div>
+<section id="updates">
+    <div class="container-fluid py-6">
+        <div class="container">
+            <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+                <h1 class="display-5 mb-5">Announcements & Updates</h1>
+            </div>
+            <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp"
+                data-wow-delay="0.1s">
+                {% for x in updates %}
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">{{x.subject}}</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+
+                        <p class="fs-5 m-0 pt-3">
+                            {{x.description}}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
+                {% for x in updates reversed %}
+                <div class="testimonial-item rounded bg-light">
+                    <div class="d-flex mb-3">
+                        <div class="position-absolute" style="top: 15px; right: 20px;">
+                        </div>
+                        <div class="ps-3 my-auto">
+                            <h4 class="mb-0">{{x.subject}}</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+
+                        <p class="fs-5 m-0 pt-3">
+                            {{x.description}}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
 
 <div class="container-fluid py-6">
     <div class="container">
         <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
-            <h1 class="display-5 mb-5">Announcements & Updates</h1>
+            <h1 class="display-5 mb-5">Forex Updates</h1>
         </div>
-        <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp"
-            data-wow-delay="0.1s">
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Bombay Stock Exchange (BSE) and National Stock Exchange (NSE)</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        These are the two primary stock exchanges in India. BSE is the oldest stock exchange in
-                        Asia, established in 1875, while NSE was founded in 1992.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">
-                            Key Indices
-                        </h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The two major stock market indices in India are the BSE Sensex and the NSE Nifty. These
-                        indices track the performance of a select group of stocks and are considered barometers of
-                        the Indian stock market's overall health.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Volatility</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Indian stock market can be highly volatile, influenced by domestic factors such as
-                        economic data, corporate earnings, and government policies, as well as global events like
-                        geopolitical tensions and fluctuations in international markets.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Market Regulations</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Securities and Exchange Board of India (SEBI) is the regulatory body overseeing the
-                        Indian securities market. SEBI regulates stock exchanges, brokers, merchant banks, and other
-                        intermediaries in the market to ensure fair and transparent trading practices.
-                    </p>
-                </div>
-            </div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+                    {
+                        "width": "100%",
+                            "height": "400",
+                                "currencies": [
+                                    "EUR",
+                                    "USD",
+                                    "JPY",
+                                    "GBP",
+                                    "CHF",
+                                    "AUD",
+                                    "CAD",
+                                    "NZD",
+                                    "CNY",
+                                    "TRY",
+                                    "SEK",
+                                    "NOK",
+                                    "DKK",
+                                    "ZAR",
+                                    "HKD",
+                                    "SGD",
+                                    "THB",
+                                    "MXN",
+                                    "IDR",
+                                    "KRW",
+                                    "PLN",
+                                    "ISK",
+                                    "KWD",
+                                    "PHP",
+                                    "MYR",
+                                    "INR",
+                                    "TWD",
+                                    "SAR",
+                                    "AED",
+                                    "RUB",
+                                    "ILS",
+                                    "ARS",
+                                    "CLP",
+                                    "COP",
+                                    "PEN",
+                                    "UYU"
+                                ],
+                                    "isTransparent": false,
+                                        "colorTheme": "light",
+                                            "locale": "en",
+                                                "backgroundColor": "#ffffff"
+                    }
+                </script>
         </div>
-        <div class="owl-carousel testimonial-carousel testimonial-carousel-2 wow bounceInUp" data-wow-delay="0.3s">
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Market Hours</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Indian stock market operates from Monday to Friday, with trading hours typically from
-                        9:15 AM to 3:30 PM Indian Standard Time (IST). However, there are pre-opening and
-                        post-closing sessions as well.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Market Capitalization</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        The Indian stock market boasts companies with diverse market capitalizations, ranging from
-                        large-cap to small-cap stocks. Some of India's largest companies by market capitalization
-                        are in sectors like IT, banking, and energy.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Foreign Institutional Investors</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-
-                    <p class="fs-5 m-0 pt-3">
-                        These are major players in the Indian stock market. FIIs refer to foreign entities investing
-                        in Indian securities, while DIIs comprise domestic entities such as mutual funds, insurance
-                        companies, and banks.
-                    </p>
-                </div>
-            </div>
-            <div class="testimonial-item rounded bg-light">
-                <div class="d-flex mb-3">
-                    <div class="position-absolute" style="top: 15px; right: 20px;">
-                    </div>
-                    <div class="ps-3 my-auto">
-                        <h4 class="mb-0">Budget Day</h4>
-                    </div>
-                </div>
-                <div class="testimonial-content">
-                    <p class="fs-5 m-0 pt-3">
-                        The annual Union Budget presentation by the Indian government is a significant event for the
-                        stock market. Investors keenly watch for announcements related to taxes, fiscal policies,
-                        infrastructure spending, and other economic reforms.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <!-- TradingView Widget END -->
     </div>
 </div>
+
+
+<div class="container-fluid py-6">
+    <div class="container">
+        <div class="text-center wow bounceInUp" data-wow-delay="0.1s">
+            <h1 class="display-5 mb-5">Top Gainers & Losers</h1>
+        </div>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+                async>
+                    {
+                        "width": "100%",
+                            "height": "500",
+                                "defaultColumn": "performance",
+                                    "defaultScreen": "top_gainers",
+                                        "market": "india",
+                                            "showToolbar": true,
+                                                "colorTheme": "light",
+                                                    "locale": "in"
+                    }
+                </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </div>
+</div>
+
+
+
+
+
 {% endblock body %}

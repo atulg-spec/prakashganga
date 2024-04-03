@@ -1,0 +1,96 @@
+Travels and Holidays Web
+
+
+1. User Login
+2. Admin Login
+3. Staff login
+4. Booking 
+5. Document Varification while Booking by admin or any API provided
+6. Payment Gateway
+7. Wallet
+8. Landing Pages
+9. Referrals
+
+
+User Login
+
+User Sign Up and Login Page
+Email Verification
+Login with Google
+Login with Facebook 
+
+
+Admin Login
+
+Admin Login Page
+Can edit and Update and Delete Users and Staff members
+Set Staff Permissions for each and every Task according to Designation
+Can Add and Deduct Payment in Wallet
+Can Ban and restrict Users
+Can See all transactions and Bookings User wise with Filter and Search feature
+Can create, edit or delete Holidays Plans
+Can create, edit or delete advertisement for Holidays Plans or any other update
+Can send Email Notifications to all Users at a time OR by selecting Users
+Get Customers support request Notification via Email
+
+Staff Login
+
+Staff Login Page 
+Can do All the things which an Admin can do according to the Permissions
+
+
+Booking
+
+All types of Flights, Bus, Train and Hotel Bookings according to the API
+Particular pages for every section
+Bookings Search according to the Categories and Location
+Search Filter Option according to DAYS, TIME, MONTH, PRICE and LOCATION
+Plans or Holidays Booking
+Get Suggestions below according to the searches and selections (No AI only maching words.)
+Holidays Packages Pages
+
+** Document Verification according to the requirement and then saved to the User profile for the Next time which can also be edited
+
+
+Payment Gateway
+
+Razorpay Payment Gateway Integration
+PayPal Payment Gateway Integration
+Payment can be added to Wallet anytime in the User profile
+OR
+The User can make immediate payment also at the Time Of Booking
+
+
+Landing Pages
+
+Home Page with Advertisement
+About Us
+Contact Us or Support
+Terms and Conditions
+Disclaimer
+Privacy Policy 
+Refund Policy
+Company or Office Location with Google map
+
+
+Referrals
+
+User will get the Referral amount to his Wallet if the reffered user login.
+The Referral amount cannot be withdrawn
+
+
+
+The estimated timeline for this website development is 45 days. This includes all
+the phases from requirement gathering to deployment. The actual timeline may
+vary based on the project scope and any unforeseen challenges during
+development.
+
+Payment Terms :
+
+Total Price of the whole work is 40,000 rupees.
+
+We propose a payment schedule as follows:
+
+30% upfront payment on starting the work.
+30% upfront payment on completion of development.
+40% on web deployment and final acceptance.
