@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-!65ch8c=)isf-wgg-im^8yxd2=hc9#l(!o&c$%qn1$69m(#xxr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,10 +125,13 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+STATIC_URL = '/static/'
+STATIC_ROOT = '/prakashganga/static'
+MEDIA_URL="/media/"
+
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR, "static"),
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
