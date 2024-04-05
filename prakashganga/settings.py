@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-!65ch8c=)isf-wgg-im^8yxd2=hc9#l(!o&c$%qn1$69m(#xxr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['www.prakashganga.co.in','prakashganga.co.in','https://prakashganga.co.in']
 
 
 # Application definition
@@ -32,10 +32,7 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
     'dashboard',
     'courses',
-
 ]
-
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,8 +117,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '624332573678-5kr3ee4bd4jjgq7sd7a0t0j3m7trmch2.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
