@@ -138,9 +138,12 @@ MESSAGE_TAGS = {
 }
 
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_URL = '/logout'
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = '/social-auth/login/google-oauth2/'
 
-RAZORPAY_KEY = 'rzp_test_ydTUOXi6RNHcZe'
-RAZORPAY_SECRET = 'uRtSdpO0XbyI25EkMbhUvEQI'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://prakashganga.co.in',
+    'https://www.prakashganga.co.in',
+]
