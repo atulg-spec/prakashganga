@@ -94,8 +94,8 @@ def refundpolicy(request):
 # DASHBOARD PAGES
 # @login_required
 def pricing(request):
-    if request.user.is_suscribed:
-        return redirect('/course')
+    # if request.user.is_suscribed:
+    #     return redirect('/course')
     # client = razorpay.Client(auth=(settings.RAZORPAY_KEY,settings.RAZORPAY_SECRET))
     # payment = client.order.create({'amount':1990000,'currency':'INR','payment_capture':1})
     # request.user.order_id = payment['id']
