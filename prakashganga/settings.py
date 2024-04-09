@@ -142,6 +142,8 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_URL = '/logout'
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = '/social-auth/login/google-oauth2/'
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
 
 RAZORPAY_KEY = 'rzp_test_ydTUOXi6RNHcZe'
 RAZORPAY_SECRET = 'uRtSdpO0XbyI25EkMbhUvEQI'

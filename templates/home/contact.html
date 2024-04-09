@@ -4,12 +4,11 @@
     location.href = "#contact"
     document.getElementById('hero').style.display = 'None'
 </script>
-<div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s"
-    style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInUp;">
-    <div class="container">
-        <div class="p-5 bg-light rounded contact-form">
+<div>
+    <div class="mt-4 container">
+        <div class="p-2 bg-light rounded contact-form">
             <div class="row g-4">
-                <div class="col-12">
+                <div class="col-12 mt-4 p-4">
                     <small
                         class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Get
                         in touch</small>
@@ -26,7 +25,7 @@
                             type="submit">Submit Now</button>
                     </form>
                 </div>
-                <div class="col-md-6 col-lg-5">
+                <div class="col-md-6 col-lg-5" id="unknownblock"> 
                     <div>
                         <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
                             <img src="static/dashboard/assets/img/icons/brands/logo2.png" alt="Prakash Ganga Capitals">
@@ -37,4 +36,26 @@
         </div>
     </div>
 </div>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // Function to check device width and hide element if smaller than 1000px
+        function checkDeviceWidth() {
+            var element = document.getElementById('unknownblock'); // Replace 'yourElementId' with the actual ID of your element
+            if (window.innerWidth < 1000) {
+                element.style.display = 'none';
+            } else {
+                element.style.display = ''; // Reset to default display property
+            }
+        }
+
+        // Initial check when the page loads
+        checkDeviceWidth();
+
+        // Event listener for window resize
+        window.addEventListener('resize', function () {
+            checkDeviceWidth();
+        });
+    });
+
+</script>
 {% endblock body %}
