@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!65ch8c=)isf-wgg-im^8yxd2=hc9#l(!o&c$%qn1$69m(#xxr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.prakashganga.co.in','prakashganga.co.in','https://prakashganga.co.in']
 # ALLOWED_HOSTS = ['*']
@@ -142,6 +142,8 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_URL = '/logout'
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = '/social-auth/login/google-oauth2/'
+SOCIAL_AUTH_RAISE_EXCEPTIONS = False
+
 
 RAZORPAY_KEY = 'rzp_test_ydTUOXi6RNHcZe'
 RAZORPAY_SECRET = 'uRtSdpO0XbyI25EkMbhUvEQI'
