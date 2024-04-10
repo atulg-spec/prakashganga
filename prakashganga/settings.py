@@ -73,10 +73,15 @@ WSGI_APPLICATION = 'prakashganga.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'prakashganga',
+        'USER': 'prakashgangauser',
+        'PASSWORD': '@Prakashganga1',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
 
 LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/course'
@@ -143,7 +148,7 @@ LOGOUT_URL = '/logout'
 LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = '/social-auth/login/google-oauth2/'
 SOCIAL_AUTH_RAISE_EXCEPTIONS = False
-
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/'
 
 RAZORPAY_KEY = 'rzp_test_ydTUOXi6RNHcZe'
 RAZORPAY_SECRET = 'uRtSdpO0XbyI25EkMbhUvEQI'
